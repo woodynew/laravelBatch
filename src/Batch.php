@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Mavinoo\Batch;
 
@@ -120,7 +122,6 @@ class Batch implements BatchInterface
             }
 
             $query = "UPDATE \"" . $this->getFullTableName($table) . '" SET ' . substr($cases, 0, -2) . " WHERE \"$index\" IN('" . implode("','", $ids) . "');";
-
         } else {
 
             $cases = '';
@@ -130,7 +131,6 @@ class Batch implements BatchInterface
             }
 
             $query = "UPDATE `" . $this->getFullTableName($table) . "` SET " . substr($cases, 0, -2) . " WHERE `$index` IN(" . '"' . implode('","', $ids) . '"' . ");";
-
         }
 
 
