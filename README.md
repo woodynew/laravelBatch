@@ -8,7 +8,7 @@ Insert and update batch (bulk) in laravel
 
 
 # Install
-`composer require mavinoo/laravel-batch`
+`composer require woodynew/laravel-batch`
 
 # Service Provider
 file app.php in array providers :
